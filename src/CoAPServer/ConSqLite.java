@@ -37,6 +37,7 @@ public class ConSqLite {
 			ResultSet rs = stmt.executeQuery(sqlcmd);
 			for (int i = 0; i < data_len; i++) {  
 				list.add(rs.getString("DATA")); 
+				rs.next();
 			}
 		    rs.close();
 		} catch (SQLException e) {
